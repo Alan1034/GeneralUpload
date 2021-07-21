@@ -1,4 +1,10 @@
-/** 通用上传组件 使用方法：  */
+/** 通用上传组件 使用方法：
+<GeneralUpload
+  :incomeForm="baseForm"
+  prop="bsImage"
+  :uploadPromise="uploadImage"
+/>
+*/
 <template>
   <ElUpload
     class="avatar-uploader"
@@ -9,11 +15,8 @@
     <img v-if="incomeForm[prop]" :src="incomeForm[prop]" class="avatar" />
     <span v-else>
       <div class="icon-box">
-        <i
-          class="el-icon-loading avatar-uploader-icon"
-          v-if="loading"
-        ></i>
-        <i class="el-icon-plus avatar-uploader-icon" else></i>
+        <i class="el-icon-loading avatar-uploader-icon" v-if="loading"></i>
+        <i class="el-icon-plus avatar-uploader-icon" v-else></i>
       </div>
       上传照片
     </span>
@@ -30,7 +33,7 @@ export default {
     ElUpload,
   },
   data() {
-    return {};
+    return { loading: false };
   },
   props: {
     incomeForm: {
@@ -41,15 +44,24 @@ export default {
       type: String,
       default: "",
     },
+    uploadPromise: {
+      type: Function,
+      default: () => {},
+    },
+  },
+  watch: {
+    incomeForm() {
+      console.log(this.incomeForm[this.prop]);
+    },
   },
   methods: {
     async beforeUpload(file) {
       this.loading = true;
       const formData = new FormData();
       formData.append("file", file);
-      const res = await uploadImage(formData);
+      const res = await this.uploadPromise(formData);
       if (res.code === 200) {
-        this.incomeForm[prop] = res.data;
+        this.incomeForm[this.prop] = res.data;
       }
       this.loading = false;
     },

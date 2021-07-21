@@ -1,80 +1,20 @@
-# VueNpmFrame
+# GeneralUpload
 
-一个从零搭建的Vue3纯净框架，用于Npm包 <br/>
-示例:
-    <GeneralBasicTable
-        size="mini"
-        :getList="getList"
-        :tableColumn="tableColumn"
-        :tableList="tableList"
-        border
-        :style="{ width: '98%', marginBottom: 10 + 'px' }"
-    >
-     ...一些传入插槽的内容
-    </GeneralBasicTable>
+一个图片上传组件 <br/>
+示例 <GeneralUpload
+          :incomeForm="baseForm"
+          prop="bsImage"
+          :uploadPromise="uploadImage"
+        />
 
 数据示例:
 
- tableList: [
-        {
-          base: "inch",
-        },
-        {
-          date: "2016-05-03",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1518 弄",
-        },
-        {
-          date: "2016-05-02",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1518 弄",
-        },
-        {
-          date: "2016-05-04",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1518 弄",
-        },
-      ], //表格内容
+baseForm: 传入一个 el-form 绑定的 Object
 
+prop:绑定的 Object 中存放图片的字段
 
- tableColumn: [
-   {
-     key: 1,
-     // prop: "",
-     // label: "",
-     render: (scope) => {
-       const { $index } = scope;
-       let ele = "";
-       switch ($index) {
-         case 1:
-           ele = "Lenght";
-           break;
-         case 2:
-           ele = "Bust";
-           break;
-         case 3:
-           ele = "Waist";
-           break; 
-         default:
-           break;
-       }
-       return ele;
-     },
-   },
-   {
-     key: 2,
-     prop: "XS",
-     label: "XS",
-     render: (scope) => {
-       const { base } = scope.row;
-       let ele = base;
-       if (!base) {
-         ele = <ElInput></ElInput>;
-       }
-       return ele;
-     },
-   },
- ],
+uploadPromise:上传图片的 Promise 函数，目前支持的返回格式为
+{"code":200,"msg":null,"data":"http://test-public.oss-cn-beijing.aliyuncs.com/material/0079W9ghly1fwcmschqnwj30bc08y7a1.jpg"}
 
-安装：npm i general-basic-table<br/>
-install: npm i general-basic-table
+安装：npm i general-upload<br/>
+install: npm i general-upload
