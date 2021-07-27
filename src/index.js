@@ -1,3 +1,5 @@
-import GeneralUpload from './GeneralUpload.vue';
+import generalUpload from './GeneralUpload.vue';
+import filesUpload from './FilesUpload.vue';
 
-export default GeneralUpload
+export const GeneralUpload = generalUpload
+export const FilesUpload = filesUpload

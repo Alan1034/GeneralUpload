@@ -2,7 +2,7 @@
 <GeneralUpload
   :incomeForm="baseForm"
   prop="bsImage"
-  :uploadPromise="uploadImage"
+  :uploadFunction="uploadFunction"
 />
 */
 <template>
@@ -11,6 +11,8 @@
     :before-upload="beforeUpload"
     :show-file-list="false"
     :on-success="handleAvatarSuccess"
+    :disabled="loading"
+    v-bind="$attrs"
   >
     <img v-if="incomeForm[prop]" :src="incomeForm[prop]" class="avatar" />
     <span v-else>
@@ -44,25 +46,20 @@ export default {
       type: String,
       default: "",
     },
-    uploadPromise: {
+    uploadFunction: {
       type: Function,
       default: () => {},
     },
   },
-  watch: {
-    incomeForm() {
-      console.log(this.incomeForm[this.prop]);
-    },
-  },
+  // watch: {
+  //   incomeForm() {
+  //     console.log(this.incomeForm[this.prop]);
+  //   },
+  // },
   methods: {
     async beforeUpload(file) {
       this.loading = true;
-      const formData = new FormData();
-      formData.append("file", file);
-      const res = await this.uploadPromise(formData);
-      if (res.code === 200) {
-        this.incomeForm[this.prop] = res.data;
-      }
+      const res = await this.uploadFunction(file, this.prop);
       this.loading = false;
     },
   },
