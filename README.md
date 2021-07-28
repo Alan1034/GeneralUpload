@@ -34,12 +34,11 @@ limit:设定能上传的最大数量
 uploadFunction:上传图片的函数，会返回一个 file 和传入的 prop;
 uploadFunction(file, prop)
 
-removeFunction:删除图片后触发的函数，一般用来修改 fileList，会返回一个 file 和 fileList;
-removeFunction(file, fileList)
+removeFunction:删除图片后触发的函数，一般用来修改 fileList，会返回一个 file 和 fileList 和传入的 prop;
+removeFunction(file, fileList, prop)
 
 fileList:存放在 data 中的文件列表;
 fileList: [{name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}, {name: 'food2.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}]
-
 
 安装：npm i general-upload<br/>
 install: npm i general-upload

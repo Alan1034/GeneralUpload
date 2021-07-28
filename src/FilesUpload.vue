@@ -23,7 +23,7 @@
 
 <script>
 import "element-plus/lib/theme-chalk/index.css";
-import { ElButton, ElUpload,ElMessage,ElMessageBox } from "element-plus";
+import { ElButton, ElUpload, ElMessage, ElMessageBox } from "element-plus";
 
 export default {
   name: "FilesUpload",
@@ -54,13 +54,11 @@ export default {
     },
   },
   data() {
-    return {
-
-    };
+    return {};
   },
   methods: {
     handleRemove(file, fileList) {
-      this.removeFunction(file, fileList)
+      this.removeFunction(file, fileList, this.prop);
     },
     handlePreview(file) {
       console.log(file);
