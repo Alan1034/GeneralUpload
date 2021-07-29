@@ -14,7 +14,8 @@
     "general-upload",
     "vue3",
     "element-plus",
-    "el-form"
+    "el-form",
+    "Multi component"
   ],
   "author": "chendeli419287484@qq.com",
   "license": "ISC",

@@ -1,4 +1,14 @@
-/** 通用上传组件 使用方法：*/
+<!--
+ * @Author: 陈德立*******419287484@qq.com
+ * @Date: 2021-07-27 18:27:35
+ * @LastEditTime: 2021-07-29 14:37:33
+ * @LastEditors: 陈德立*******419287484@qq.com
+ * @Github: https://github.com/Alan1034
+ * @Description: 
+ * @FilePath: \GeneralUpload\src\FilesUpload.vue
+ * 
+-->
+
 <template>
   <ElUpload
     class="upload-demo"
@@ -12,7 +22,9 @@
     :before-upload="beforeUpload"
     v-bind="$attrs"
   >
-    <ElButton size="small" type="primary">点击上传</ElButton>
+    <ElButton size="small" type="primary" :disabled="loading"
+      >点击上传</ElButton
+    >
     <!-- <template #tip>
             <div class="el-upload__tip">
               只能上传 jpg/png 文件，且不超过 500kb
@@ -54,14 +66,14 @@ export default {
     },
   },
   data() {
-    return {};
+    return { loading: false };
   },
   methods: {
     handleRemove(file, fileList) {
       this.removeFunction(file, fileList, this.prop);
     },
     handlePreview(file) {
-      console.log(file);
+      ElMessage(file.name);
     },
     handleExceed(files, fileList) {
       ElMessage.warning(
@@ -82,4 +94,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+::v-deep(.el-upload-list__item-name) {
+  max-width: 250px;
+}
+</style>

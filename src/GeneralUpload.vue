@@ -1,3 +1,13 @@
+<!--
+ * @Author: 陈德立*******419287484@qq.com
+ * @Date: 2021-07-21 18:01:00
+ * @LastEditTime: 2021-07-29 17:24:09
+ * @LastEditors: 陈德立*******419287484@qq.com
+ * @Github: https://github.com/Alan1034
+ * @Description: 
+ * @FilePath: \GeneralUpload\src\GeneralUpload.vue
+ * 
+-->
 /** 通用上传组件 使用方法：
 <GeneralUpload
   :incomeForm="baseForm"
