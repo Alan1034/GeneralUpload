@@ -1,7 +1,7 @@
 <!--
  * @Author: 陈德立*******419287484@qq.com
  * @Date: 2021-07-21 18:01:00
- * @LastEditTime: 2021-07-29 17:24:09
+ * @LastEditTime: 2021-07-29 19:04:00
  * @LastEditors: 陈德立*******419287484@qq.com
  * @Github: https://github.com/Alan1034
  * @Description: 
@@ -18,9 +18,9 @@
 <template>
   <ElUpload
     class="avatar-uploader"
+    action="//"
     :before-upload="beforeUpload"
     :show-file-list="false"
-    :on-success="handleAvatarSuccess"
     :disabled="loading"
     v-bind="$attrs"
   >
@@ -71,6 +71,7 @@ export default {
       this.loading = true;
       const res = await this.uploadFunction(file, this.prop);
       this.loading = false;
+      return res
     },
   },
 };

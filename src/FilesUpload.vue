@@ -1,7 +1,7 @@
 <!--
  * @Author: 陈德立*******419287484@qq.com
  * @Date: 2021-07-27 18:27:35
- * @LastEditTime: 2021-07-29 14:37:33
+ * @LastEditTime: 2021-07-29 19:05:13
  * @LastEditors: 陈德立*******419287484@qq.com
  * @Github: https://github.com/Alan1034
  * @Description: 
@@ -12,6 +12,7 @@
 <template>
   <ElUpload
     class="upload-demo"
+    action="//"
     :on-preview="handlePreview"
     :on-remove="handleRemove"
     :before-remove="beforeRemove"
@@ -89,6 +90,7 @@ export default {
       this.loading = true;
       const res = await this.uploadFunction(file, this.prop);
       this.loading = false;
+      return res;
     },
   },
 };
