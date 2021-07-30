@@ -1,7 +1,7 @@
 <!--
  * @Author: 陈德立*******419287484@qq.com
  * @Date: 2021-07-21 18:01:00
- * @LastEditTime: 2021-07-29 19:04:00
+ * @LastEditTime: 2021-07-30 14:20:51
  * @LastEditors: 陈德立*******419287484@qq.com
  * @Github: https://github.com/Alan1034
  * @Description: 
@@ -82,7 +82,6 @@ export default {
   border: 1px dashed #d9d9d9;
   border-radius: 6px;
   cursor: pointer;
-  display: flex;
   overflow: hidden;
   display: flex;
   width: 100px;
