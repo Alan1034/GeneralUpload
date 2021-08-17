@@ -2,6 +2,7 @@
 
 ##一个图片上传组件，有缩略图 <br/>
 示例：
+
       <GeneralUpload
        :incomeForm="baseForm"
        prop="bsImage"
@@ -20,7 +21,9 @@ uploadFunction(file, prop)
 其他 Upload 组件的 Attribute(https://element-plus.org/#/zh-CN/component/upload):选传
 
 ##一个多文件上传组件<br/>
-示例 <FilesUpload
+示例：
+
+         <FilesUpload
           prop="patternPath"
           :limit="3"
           :uploadFunction="uploadFunction"
@@ -45,7 +48,8 @@ fileList: [{name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a1542
 
 ##一个多图片上传组件<br/>
 示例:
-<PicturesUpload
+
+        <PicturesUpload
           prop="itemImages"
           :uploadFunction="uploadFunction"
           :removeFunction="removeFunction"
