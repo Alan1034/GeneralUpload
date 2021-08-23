@@ -9,7 +9,7 @@
        :uploadFunction="uploadFunction"
       />
 
-![image-20210823115641161](https://raw.githubusercontent.com/Alan1034/PicturesServer/main/PicGo_imgs/image-20210823115641161.png?token=AICSKHQO7Z4QAFDPPZEH2GTBEMOLK)
+![Image text](https://github.com/Alan1034/PicturesServer/blob/main/PicGo_imgs/202108231121814.png)
 
 数据示例:
 
