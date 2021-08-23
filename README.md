@@ -33,7 +33,7 @@ uploadFunction(file, prop)
           :fileList="fileList"
         />
 
-![image-20210823113704460](https://raw.githubusercontent.com/Alan1034/PicturesServer/main/PicGo_imgs/202108231137554.png?token=AICSKHSQFCDTDFJE3AMDLBTBEMMCE)
+![image-20210823120121891](https://raw.githubusercontent.com/Alan1034/PicturesServer/main/PicGo_imgs/image-20210823120121891.png?token=AICSKHU7LVIZKFBHUJOI26TBEMO44)
 
 数据示例:
 
@@ -61,7 +61,7 @@ fileList: [{name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a1542
           :limit="5"
         />
 
-![image-20210823113753946](https://raw.githubusercontent.com/Alan1034/PicturesServer/main/PicGo_imgs/202108231137062.png?token=AICSKHQSJFVTKPESJQDVO6LBEMMFC)
+![image-20210823120157995](https://raw.githubusercontent.com/Alan1034/PicturesServer/main/PicGo_imgs/image-20210823120157995.png?token=AICSKHRM6D4KZ6PP5BBUTZDBEMO7G)
 
 数据示例:
 
