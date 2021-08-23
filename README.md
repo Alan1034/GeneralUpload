@@ -9,7 +9,7 @@
        :uploadFunction="uploadFunction"
       />
 
-![image-20210823112307042](https://raw.githubusercontent.com/Alan1034/PicturesServer/main/PicGo_imgs/202108231123134.png?token=AICSKHXW4E75QY4MWRQ5CFTBEMKNQ)
+![image-20210823113524248](https://raw.githubusercontent.com/Alan1034/PicturesServer/main/PicGo_imgs/202108231135353.png?token=AICSKHXN6DPKGFO2RE4DSVTBEML4E)
 
 数据示例:
 
@@ -33,7 +33,7 @@ uploadFunction(file, prop)
           :fileList="fileList"
         />
 
-![image-20210823112522786](https://raw.githubusercontent.com/Alan1034/PicturesServer/main/PicGo_imgs/202108231125901.png?token=AICSKHRTBLAFUSJGLILYSITBEMKWA)
+![image-20210823113704460](https://raw.githubusercontent.com/Alan1034/PicturesServer/main/PicGo_imgs/202108231137554.png?token=AICSKHSQFCDTDFJE3AMDLBTBEMMCE)
 
 数据示例:
 
@@ -61,7 +61,7 @@ fileList: [{name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a1542
           :limit="5"
         />
 
-![image-20210823112441177](https://raw.githubusercontent.com/Alan1034/PicturesServer/main/PicGo_imgs/202108231124282.png?token=AICSKHUHQJ325VD5FZXTWSDBEMKTO)
+![image-20210823113753946](https://raw.githubusercontent.com/Alan1034/PicturesServer/main/PicGo_imgs/202108231137062.png?token=AICSKHQSJFVTKPESJQDVO6LBEMMFC)
 
 数据示例:
 
