@@ -21,7 +21,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/Alan1034/GeneralUpload"
   },
   "devDependencies": {
     "eslint": "^7.31.0",

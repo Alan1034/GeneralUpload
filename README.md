@@ -9,6 +9,8 @@
        :uploadFunction="uploadFunction"
       />
 
+![image-20210823112307042](https://raw.githubusercontent.com/Alan1034/PicturesServer/main/PicGo_imgs/202108231123134.png?token=AICSKHXW4E75QY4MWRQ5CFTBEMKNQ)
+
 数据示例:
 
 baseForm: 传入一个 el-form 绑定的 Object
@@ -18,7 +20,7 @@ prop:绑定的 Object 中存放图片的字段
 uploadFunction:上传图片的函数，会返回一个 file 和传入的 prop，如果返回 false 或者返回 Promise 且被 reject,则停止上传;
 uploadFunction(file, prop)
 
-其他 Upload 组件的 Attribute(https://element-plus.org/#/zh-CN/component/upload):选传
+其他 Upload 组件的 Attribute(https://element-plus.org/#/zh-CN/component/upload) :选传
 
 ##一个多文件上传组件<br/>
 示例：
@@ -30,6 +32,8 @@ uploadFunction(file, prop)
           :removeFunction="removeFunction"
           :fileList="fileList"
         />
+
+![image-20210823112522786](https://raw.githubusercontent.com/Alan1034/PicturesServer/main/PicGo_imgs/202108231125901.png?token=AICSKHRTBLAFUSJGLILYSITBEMKWA)
 
 数据示例:
 
@@ -56,6 +60,8 @@ fileList: [{name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a1542
           :fileList="fileList"
           :limit="5"
         />
+
+![image-20210823112441177](https://raw.githubusercontent.com/Alan1034/PicturesServer/main/PicGo_imgs/202108231124282.png?token=AICSKHUHQJ325VD5FZXTWSDBEMKTO)
 
 数据示例:
 
