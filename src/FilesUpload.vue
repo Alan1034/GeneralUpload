@@ -1,7 +1,7 @@
 <!--
  * @Author: 陈德立*******419287484@qq.com
  * @Date: 2021-07-27 18:27:35
- * @LastEditTime: 2021-07-30 16:37:02
+ * @LastEditTime: 2021-09-07 19:25:46
  * @LastEditors: 陈德立*******419287484@qq.com
  * @Github: https://github.com/Alan1034
  * @Description: 
@@ -73,9 +73,9 @@ export default {
     },
     handleExceed(files, fileList) {
       ElMessage.warning(
-        `当前限制选择 ${this.$attrs.limit} 个文件，本次选择了 ${files.length} 个文件，共选择了 ${
-          files.length + fileList.length
-        } 个文件`
+        `当前限制选择 ${this.$attrs.limit} 个文件，本次选择了 ${
+          files.length
+        } 个文件，共选择了 ${files.length + fileList.length} 个文件`
       );
     },
     beforeRemove(file, fileList) {
@@ -97,5 +97,8 @@ export default {
 <style scoped>
 ::v-deep(.el-upload-list__item-name) {
   max-width: 250px;
+}
+::v-deep(.el-icon-close-tip) {
+  display: none !important;
 }
 </style>
