@@ -1,7 +1,7 @@
 <!--
  * @Author: 陈德立*******419287484@qq.com
  * @Date: 2021-07-21 18:01:00
- * @LastEditTime: 2021-07-30 14:20:51
+ * @LastEditTime: 2021-10-14 16:43:22
  * @LastEditors: 陈德立*******419287484@qq.com
  * @Github: https://github.com/Alan1034
  * @Description: 
@@ -36,7 +36,6 @@
 </template>
 
 <script>
-import "element-plus/lib/theme-chalk/index.css";
 import { ElUpload } from "element-plus";
 
 export default {

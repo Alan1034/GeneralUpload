@@ -1,7 +1,7 @@
 <!--
  * @Author: 陈德立*******419287484@qq.com
  * @Date: 2021-07-27 18:27:35
- * @LastEditTime: 2021-09-07 19:25:46
+ * @LastEditTime: 2021-10-14 16:43:26
  * @LastEditors: 陈德立*******419287484@qq.com
  * @Github: https://github.com/Alan1034
  * @Description: 
@@ -34,7 +34,6 @@
 </template>
 
 <script>
-import "element-plus/lib/theme-chalk/index.css";
 import { ElButton, ElUpload, ElMessage, ElMessageBox } from "element-plus";
 
 export default {
