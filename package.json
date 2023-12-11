@@ -1,6 +1,6 @@
 {
   "name": "general-upload",
-  "version": "1.0.13",
+  "version": "1.1.0",
   "description": "",
   "main": "./dist/index.umd.cjs",
   "scripts": {
