@@ -5,16 +5,17 @@
  * @LastEditors: 陈德立*******419287484@qq.com
  * @Github: https://github.com/Alan1034
  * @Description: 
+ * 通用上传组件 使用方法：
+ * <GeneralUpload
+ *  :incomeForm="baseForm"
+ *  prop="bsImage"
+ *  :uploadFunction="uploadFunction"
+ * />
+ *
  * @FilePath: \GeneralUpload\src\GeneralUpload.vue
  * 
 -->
-/** 通用上传组件 使用方法：
-<GeneralUpload
-  :incomeForm="baseForm"
-  prop="bsImage"
-  :uploadFunction="uploadFunction"
-/>
-*/
+
 <template>
   <ElUpload
     class="avatar-uploader"
@@ -70,7 +71,7 @@ export default {
       this.loading = true;
       const res = await this.uploadFunction(file, this.prop);
       this.loading = false;
-      return res
+      return res;
     },
   },
 };

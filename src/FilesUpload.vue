@@ -1,7 +1,7 @@
 <!--
  * @Author: 陈德立*******419287484@qq.com
  * @Date: 2021-07-27 18:27:35
- * @LastEditTime: 2021-10-14 16:43:26
+ * @LastEditTime: 2023-12-11 14:53:55
  * @LastEditors: 陈德立*******419287484@qq.com
  * @Github: https://github.com/Alan1034
  * @Description: 
@@ -20,9 +20,10 @@
     :on-exceed="handleExceed"
     :file-list="fileList"
     :before-upload="beforeUpload"
+    :disabled="onlyList"
     v-bind="$attrs"
   >
-    <ElButton size="small" type="primary" :disabled="loading"
+    <ElButton :size="size" type="primary" :disabled="loading" v-if="!onlyList"
       >点击上传</ElButton
     >
     <!-- <template #tip>
@@ -43,7 +44,11 @@ export default {
     ElButton,
   },
   props: {
-    prop: {
+    onlyList: {
+      type: Boolean,
+      default: false,
+    },
+    size: {
       type: String,
       default: "",
     },
@@ -65,7 +70,7 @@ export default {
   },
   methods: {
     handleRemove(file, fileList) {
-      this.removeFunction(file, fileList, this.prop);
+      this.removeFunction(file, fileList);
     },
     handlePreview(file) {
       ElMessage(file.name);
@@ -85,7 +90,7 @@ export default {
     },
     async beforeUpload(file) {
       this.loading = true;
-      const res = await this.uploadFunction(file, this.prop);
+      const res = await this.uploadFunction(file);
       this.loading = false;
       return res;
     },

@@ -37,15 +37,15 @@ uploadFunction(file, prop)
 
 数据示例:
 
-prop:绑定的 Object 中存放图片的字段
+onlyList:是否纯展示
 
 limit 和其他 Upload 组件的 Attribute(https://element-plus.org/#/zh-CN/component/upload):选传
 
 uploadFunction:上传图片的函数，会返回一个 file 和传入的 prop，如果返回 false 或者返回 Promise 且被 reject,则停止上传;
-uploadFunction(file, prop)
+uploadFunction(file)
 
 removeFunction:删除图片后触发的函数，一般用来修改 fileList，会返回一个 file 和 fileList 和传入的 prop;
-removeFunction(file, fileList, prop)
+removeFunction(file, fileList)
 
 fileList:存放在 data 中的文件列表;
 fileList: [{name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}, {name: 'food2.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}]
