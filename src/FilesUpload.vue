@@ -60,6 +60,14 @@ export default {
       type: Function,
       default: () => {},
     },
+    previewFunction: {
+      type: Function,
+      default: () => {},
+    },
+    exceedFunction: {
+      type: Function,
+      default: () => {},
+    },
     fileList: {
       type: Array,
       default: [],
@@ -74,6 +82,7 @@ export default {
     },
     handlePreview(file) {
       ElMessage(file.name);
+      this.previewFunction(file);
     },
     handleExceed(files, fileList) {
       ElMessage.warning(
@@ -81,6 +90,7 @@ export default {
           files.length
         } 个文件，共选择了 ${files.length + fileList.length} 个文件`
       );
+      this.exceedFunction(file);
     },
     beforeRemove(file, fileList) {
       if (!file) {
