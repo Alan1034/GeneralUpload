@@ -1,3 +1,5 @@
+<!-- @format -->
+
 # GeneralUpload
 
 ##一个图片上传组件，有缩略图 <br/>
@@ -32,6 +34,12 @@ uploadFunction(file, prop)
           :removeFunction="removeFunction"
           :fileList="fileList"
         />
+        
+         <FilesUpload
+          onlyList 
+          :previewFunction="handlePreview" 
+          :fileList="fileList"
+        />
 
 ![img](https://raw.githubusercontent.com/Alan1034/PicturesServer/main/PicGo_imgs/202108231137554.png?token=AICSKHUHZEIRTK5TMMDJSOLBEM67I)
 
@@ -46,6 +54,12 @@ uploadFunction(file)
 
 removeFunction:删除图片后触发的函数，一般用来修改 fileList，会返回一个 file 和 fileList 和传入的 prop;
 removeFunction(file, fileList)
+
+previewFunction:点击附件后触发的函数，一般用来制作点击后下载文件
+previewFunction(file)
+
+handleExceed:当超出限制时触发的函数
+handleExceed(file)
 
 fileList:存放在 data 中的文件列表;
 fileList: [{name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}, {name: 'food2.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}]
@@ -74,6 +88,12 @@ uploadFunction(file, prop)
 
 removeFunction:删除图片后触发的函数，一般用来修改 fileList，会返回一个 file 和 fileList 和传入的 prop;
 removeFunction(file, fileList, prop)
+
+previewFunction:点击附件后触发的函数，一般用来制作点击后下载文件
+previewFunction(file)
+
+handleExceed:当超出限制时触发的函数
+handleExceed(file)
 
 fileList:存放在 data 中的文件列表;
 fileList: [{name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}, {name: 'food2.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}]
