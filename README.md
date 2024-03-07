@@ -82,3 +82,4 @@ fileList: [{name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a1542
 install: npm i general-upload
 
 使用：import { GeneralUpload, FilesUpload } from "general-upload";
+import 'general-upload/style'
