@@ -1,7 +1,7 @@
 <!--
  * @Author: 陈德立*******419287484@qq.com
  * @Date: 2021-07-21 18:01:00
- * @LastEditTime: 2021-10-14 16:43:22
+ * @LastEditTime: 2024-03-13 15:58:58
  * @LastEditors: 陈德立*******419287484@qq.com
  * @Github: https://github.com/Alan1034
  * @Description: 
@@ -31,7 +31,7 @@
         <i class="el-icon-loading avatar-uploader-icon" v-if="loading"></i>
         <i class="el-icon-plus avatar-uploader-icon" v-else></i>
       </div>
-      上传照片
+      {{ prompt || "上传照片" }}
     </span>
   </ElUpload>
 </template>
@@ -59,6 +59,10 @@ export default {
     uploadFunction: {
       type: Function,
       default: () => {},
+    },
+    prompt: {
+      type: String,
+      default: "",
     },
   },
   // watch: {

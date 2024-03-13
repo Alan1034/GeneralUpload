@@ -1,7 +1,7 @@
 <!--
  * @Author: 陈德立*******419287484@qq.com
  * @Date: 2021-07-27 18:27:35
- * @LastEditTime: 2023-12-11 14:53:55
+ * @LastEditTime: 2024-03-13 15:31:59
  * @LastEditors: 陈德立*******419287484@qq.com
  * @Github: https://github.com/Alan1034
  * @Description: 
@@ -24,7 +24,7 @@
     v-bind="$attrs"
   >
     <ElButton :size="size" type="primary" :disabled="loading" v-if="!onlyList"
-      >点击上传</ElButton
+      >{{ prompt || "点击上传" }}</ElButton
     >
     <!-- <template #tip>
             <div class="el-upload__tip">
@@ -71,6 +71,10 @@ export default {
     fileList: {
       type: Array,
       default: [],
+    },
+    prompt: {
+      type: String,
+      default: "",
     },
   },
   data() {

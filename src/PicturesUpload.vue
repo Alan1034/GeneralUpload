@@ -1,7 +1,7 @@
 <!--
  * @Author: 陈德立*******419287484@qq.com
  * @Date: 2021-07-27 18:27:35
- * @LastEditTime: 2024-02-22 18:45:27
+ * @LastEditTime: 2024-03-13 15:32:30
  * @LastEditors: 陈德立*******419287484@qq.com
  * @Github: https://github.com/Alan1034
  * @Description: 
@@ -28,7 +28,7 @@
         <div class="icon-box">
           <i class="el-icon-plus avatar-uploader-icon"></i>
         </div>
-        上传照片
+        {{ prompt || "上传照片" }}
       </span>
     </div>
   </ElUpload>
@@ -67,6 +67,10 @@ export default {
     fileList: {
       type: Array,
       default: [],
+    },
+    prompt: {
+      type: String,
+      default: "",
     },
   },
   data() {
