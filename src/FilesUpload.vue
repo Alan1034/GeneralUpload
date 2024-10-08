@@ -1,7 +1,7 @@
 <!--
  * @Author: 陈德立*******419287484@qq.com
  * @Date: 2021-07-27 18:27:35
- * @LastEditTime: 2024-03-13 15:31:59
+ * @LastEditTime: 2024-10-08 15:31:12
  * @LastEditors: 陈德立*******419287484@qq.com
  * @Github: https://github.com/Alan1034
  * @Description: 
@@ -10,7 +10,7 @@
 -->
 
 <template>
-  <ElUpload
+  <el-upload
     class="upload-demo"
     action="//"
     :on-preview="handlePreview"
@@ -23,26 +23,20 @@
     :disabled="onlyList"
     v-bind="$attrs"
   >
-    <ElButton :size="size" type="primary" :disabled="loading" v-if="!onlyList"
-      >{{ prompt || "点击上传" }}</ElButton
+    <el-button :size="size" type="primary" :disabled="loading" v-if="!onlyList"
+      >{{ prompt || "点击上传" }}</el-button
     >
     <!-- <template #tip>
             <div class="el-upload__tip">
               只能上传 jpg/png 文件，且不超过 500kb
             </div>
           </template> -->
-  </ElUpload>
+  </el-upload>
 </template>
 
 <script>
-import { ElButton, ElUpload, ElMessage, ElMessageBox } from "element-plus";
-
 export default {
   name: "FilesUpload",
-  components: {
-    ElUpload,
-    ElButton,
-  },
   props: {
     onlyList: {
       type: Boolean,
@@ -85,11 +79,11 @@ export default {
       this.removeFunction(file, fileList);
     },
     handlePreview(file) {
-      ElMessage(file.name);
+      this.$message(file.name);
       this.previewFunction(file);
     },
     handleExceed(files, fileList) {
-      ElMessage.warning(
+      this.$message.warning(
         `当前限制选择 ${this.$attrs.limit} 个文件，本次选择了 ${
           files.length
         } 个文件，共选择了 ${files.length + fileList.length} 个文件`
@@ -100,7 +94,7 @@ export default {
       if (!file) {
         return false;
       }
-      return ElMessageBox.confirm(`确定移除 ${file.name}？`);
+      return this.$confirm(`确定移除 ${file.name}？`);
     },
     async beforeUpload(file) {
       this.loading = true;

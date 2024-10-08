@@ -1,8 +1,8 @@
 import legacy from '@vitejs/plugin-legacy'
 import { fileURLToPath } from 'url'
 import { defineConfig, loadEnv, splitVendorChunkPlugin } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import vueJsx from '@vitejs/plugin-vue-jsx'
+import vue from '@vitejs/plugin-vue2'
+import vueJsx from '@vitejs/plugin-vue2-jsx'
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import path from 'path';
 const __filenameNew = fileURLToPath(import.meta.url)
@@ -80,6 +80,7 @@ export default defineConfig(({ command, mode }) => {
      * @return {*}
      */
     build: {
+      // https://cn.vitejs.dev/guide/build.html#library-mode
       lib: {
         // Could also be a dictionary or array of multiple entry points
         // 添加打包入口文件夹
@@ -92,13 +93,12 @@ export default defineConfig(({ command, mode }) => {
       },
       rollupOptions: {
         // 确保外部化处理那些你不想打包进库的依赖
-        external: ['vue', 'vue-router', "element-plus"],
+        external: ['vue','element-ui'],
         output: {
           // 在 UMD 构建模式下为这些外部化的依赖提供一个全局变量
           globals: {
             vue: 'Vue',
-            'vue-router': 'vue-router',
-            "element-plus": "element-plus",
+            'element-ui':'element-ui',
           },
         },
       },

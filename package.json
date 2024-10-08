@@ -19,8 +19,8 @@
     "upload",
     "general",
     "general-upload",
-    "vue3",
-    "element-plus",
+    "vue2",
+    "element-ui",
     "el-form",
     "Multi component"
   ],
@@ -33,9 +33,9 @@
   "devDependencies": {
     "@playwright/test": "^1.36.1",
     "@types/node": "^20.8.10",
-    "@vitejs/plugin-legacy": "^4.1.1",
-    "@vitejs/plugin-vue": "^4.2.3",
-    "@vitejs/plugin-vue-jsx": "^3.0.1",
+    "@vitejs/plugin-legacy": "^5.4.2",
+    "@vitejs/plugin-vue2": "^2.3.1",
+    "@vitejs/plugin-vue2-jsx": "^1.1.1",
     "chalk": "^2.4.2",
     "cross-env": "^7.0.3",
     "eslint": "^7.31.0",
@@ -48,8 +48,7 @@
     "vite-plugin-image-optimizer": "^1.1.6"
   },
   "peerDependencies": {
-    "element-plus": ">=2.4.2",
-    "vue": ">=3.3.4"
+    "vue": "^2.7.0-0"
   },
   "typings": "./dist/index.d.ts",
   "type": "module",

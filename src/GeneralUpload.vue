@@ -17,7 +17,7 @@
 -->
 
 <template>
-  <ElUpload
+  <el-upload
     class="avatar-uploader"
     action="//"
     :before-upload="beforeUpload"
@@ -33,17 +33,13 @@
       </div>
       {{ prompt || "上传照片" }}
     </span>
-  </ElUpload>
+  </el-upload>
 </template>
 
 <script>
-import { ElUpload } from "element-plus";
 
 export default {
   name: "GeneralUpload",
-  components: {
-    ElUpload,
-  },
   data() {
     return { loading: false };
   },
