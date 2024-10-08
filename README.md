@@ -2,7 +2,7 @@
 
 # GeneralUpload
 
-##一个图片上传组件，有缩略图 <br/>
+##一个图片上传组件，有缩略图，vue2请使用@1版本，Vue3请使用@2版本 <br/>
 示例：
 
       <GeneralUpload
