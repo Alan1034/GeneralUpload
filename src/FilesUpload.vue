@@ -1,7 +1,7 @@
 <!--
  * @Author: 陈德立*******419287484@qq.com
  * @Date: 2021-07-27 18:27:35
- * @LastEditTime: 2024-03-13 15:31:59
+ * @LastEditTime: 2024-10-09 18:09:10
  * @LastEditors: 陈德立*******419287484@qq.com
  * @Github: https://github.com/Alan1034
  * @Description: 
@@ -94,7 +94,7 @@ export default {
           files.length
         } 个文件，共选择了 ${files.length + fileList.length} 个文件`
       );
-      this.exceedFunction(file);
+      this.exceedFunction(files, fileList);
     },
     beforeRemove(file, fileList) {
       if (!file) {
