@@ -77,6 +77,7 @@ fileList: [{name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a1542
           :removeFunction="removeFunction"
           :fileList="fileList"
           :limit="5"
+          accept="image/png,image/bmp,image/jpeg"
         />
 
 ![img](https://raw.githubusercontent.com/Alan1034/PicturesServer/main/PicGo_imgs/202108231137062.png?token=AICSKHXPKULI5RQ4LG4RHOTBEM65E)
@@ -103,6 +104,8 @@ exceedFunction(file)
 
 fileList:存放在 data 中的文件列表;
 fileList: [{name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}, {name: 'food2.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}]
+
+accept:https://www.iana.org/assignments/media-types/media-types.xhtml#image
 
 安装：npm i general-upload<br/>
 install: npm i general-upload
