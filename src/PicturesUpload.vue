@@ -1,7 +1,7 @@
 <!--
  * @Author: 陈德立*******419287484@qq.com
  * @Date: 2021-07-27 18:27:35
- * @LastEditTime: 2024-10-08 18:26:01
+ * @LastEditTime: 2024-10-09 17:49:39
  * @LastEditors: 陈德立*******419287484@qq.com
  * @Github: https://github.com/Alan1034
  * @Description: 
@@ -96,7 +96,7 @@ export default {
         `当前限制选择 ${this.$attrs.limit} 个文件，本次选择了 ${files.length
         } 个文件，共选择了 ${files.length + fileList.length} 个文件`
       );
-      this.exceedFunction(file);
+      this.exceedFunction(files, fileList);
     },
     async beforeUpload(file) {
       this.loading = true;
@@ -144,6 +144,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+
     .icon-box {
       display: grid;
     }

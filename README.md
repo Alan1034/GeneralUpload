@@ -59,7 +59,7 @@ uploadFunction(file)
 removeFunction:删除图片后触发的函数，一般用来修改 fileList，会返回一个 file 和 fileList 和传入的 prop;
 removeFunction(file, fileList)
 
-previewFunction:点击附件后触发的函数，一般用来制作点击后下载文件
+previewFunction:点击附件后触发的函数，一般用来制作点击后预览/下载文件
 previewFunction(file)
 
 handleExceed:当超出限制时触发的函数
