@@ -17,14 +17,8 @@
 -->
 
 <template>
-  <el-upload
-    class="avatar-uploader"
-    action="//"
-    :before-upload="beforeUpload"
-    :show-file-list="false"
-    :disabled="loading"
-    v-bind="$attrs"
-  >
+  <el-upload class="avatar-uploader" action="//" :before-upload="beforeUpload" :show-file-list="false"
+    :disabled="loading" v-bind="$attrs">
     <img v-if="incomeForm[prop]" :src="incomeForm[prop]" class="avatar" />
     <span v-else>
       <div class="icon-box">
@@ -33,6 +27,12 @@
       </div>
       {{ prompt || "上传照片" }}
     </span>
+    <template v-slot:trigger>
+      <slot name="trigger"></slot>
+    </template>
+    <template v-slot:tip>
+      <slot name="tip"></slot>
+    </template>
   </el-upload>
 </template>
 
@@ -46,7 +46,7 @@ export default {
   props: {
     incomeForm: {
       type: Object,
-      default: {},
+      default: () => { },
     },
     prop: {
       type: String,
@@ -54,7 +54,7 @@ export default {
     },
     uploadFunction: {
       type: Function,
-      default: () => {},
+      default: () => { },
     },
     prompt: {
       type: String,
@@ -89,9 +89,11 @@ export default {
   justify-content: center;
   align-items: center;
   background-color: #f5f7fa;
+
   .icon-box {
     display: grid;
   }
+
   img {
     max-width: 100%;
     max-height: 100%;

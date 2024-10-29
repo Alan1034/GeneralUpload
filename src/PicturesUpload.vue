@@ -1,7 +1,7 @@
 <!--
  * @Author: 陈德立*******419287484@qq.com
  * @Date: 2021-07-27 18:27:35
- * @LastEditTime: 2024-10-09 17:49:39
+ * @LastEditTime: 2024-10-29 18:02:08
  * @LastEditors: 陈德立*******419287484@qq.com
  * @Github: https://github.com/Alan1034
  * @Description: 
@@ -21,6 +21,12 @@
         {{ prompt || "上传照片" }}
       </span>
     </div>
+    <template v-slot:trigger>
+      <slot name="trigger"></slot>
+    </template>
+    <template v-slot:tip>
+      <slot name="tip"></slot>
+    </template>
   </el-upload>
 </template>
 

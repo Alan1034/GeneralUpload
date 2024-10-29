@@ -26,6 +26,8 @@ uploadFunction(file, prop)
 
 其他 Upload 组件的 Attribute(https://element.eleme.io/#/zh-CN/component/upload) :选传
 
+# FilesUpload
+
 ##一个多文件上传组件<br/>
 示例：
 
@@ -42,12 +44,26 @@ uploadFunction(file, prop)
           :previewFunction="handlePreview" 
           :fileList="fileList"
         />
+        
+          <FilesUpload :uploadFunction="uploadFunction" :removeFunction="removeFunction" :previewFunction="previewFunction"
+            pure multiple :limit="5" accept="image/png,application/pdf,image/jpeg" :fileList="fileList">
+            <template v-slot:trigger>
+              <el-button class="upload-button">选择文件</el-button>
+            </template>
+            <template v-slot:tip>
+              <span class="slot-tip">
+                支持上传不超过5个文档，可支持上传pdf、jpg、png等文件格式
+              </span>
+            </template>
+          </FilesUpload>
 
 ![img](https://raw.githubusercontent.com/Alan1034/PicturesServer/main/PicGo_imgs/202108231137554.png?token=AICSKHUHZEIRTK5TMMDJSOLBEM67I)
 
 数据示例:
 
 onlyList:是否纯展示
+
+pure:不展示点击上传按钮，可以改为slot传入
 
 prompt:上传按钮上显示的文字
 
@@ -67,6 +83,8 @@ handleExceed(file)
 
 fileList:存放在 data 中的文件列表;
 fileList: [{name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}, {name: 'food2.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}]
+
+# PicturesUpload
 
 ##一个多图片上传组件<br/>
 示例:
