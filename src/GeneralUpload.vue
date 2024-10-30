@@ -1,7 +1,7 @@
 <!--
  * @Author: 陈德立*******419287484@qq.com
  * @Date: 2021-07-21 18:01:00
- * @LastEditTime: 2024-03-13 15:58:58
+ * @LastEditTime: 2024-10-30 09:51:14
  * @LastEditors: 陈德立*******419287484@qq.com
  * @Github: https://github.com/Alan1034
  * @Description: 
@@ -29,6 +29,7 @@
     </span>
     <template v-slot:trigger>
       <slot name="trigger"></slot>
+      <slot></slot>
     </template>
     <template v-slot:tip>
       <slot name="tip"></slot>

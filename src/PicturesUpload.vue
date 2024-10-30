@@ -23,6 +23,7 @@
     </div>
     <template v-slot:trigger>
       <slot name="trigger"></slot>
+      <slot></slot>
     </template>
     <template v-slot:tip>
       <slot name="tip"></slot>
