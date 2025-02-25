@@ -11,7 +11,7 @@
        :uploadFunction="uploadFunction"
       />
 
-![img](https://raw.githubusercontent.com/Alan1034/PicturesServer/main/PicGo_imgs/202108231135353.png?token=AICSKHVN6DVTLAX3RCTF4P3BEM6XQ)
+![img](https://raw.githubusercontent.com/Alan1034/PicturesServer/main/PicGo_imgs/202108231135353.png)
 
 数据示例:
 
@@ -57,7 +57,7 @@ uploadFunction(file, prop)
             </template>
           </FilesUpload>
 
-![img](https://raw.githubusercontent.com/Alan1034/PicturesServer/main/PicGo_imgs/202108231137554.png?token=AICSKHUHZEIRTK5TMMDJSOLBEM67I)
+![img](https://raw.githubusercontent.com/Alan1034/PicturesServer/main/PicGo_imgs/202108231137554.png)
 
 数据示例:
 
@@ -98,7 +98,7 @@ fileList: [{name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a1542
           accept="image/png,image/bmp,image/jpeg"
         />
 
-![img](https://raw.githubusercontent.com/Alan1034/PicturesServer/main/PicGo_imgs/202108231137062.png?token=AICSKHXPKULI5RQ4LG4RHOTBEM65E)
+![img](https://raw.githubusercontent.com/Alan1034/PicturesServer/main/PicGo_imgs/202108231137062.png)
 
 数据示例:
 
