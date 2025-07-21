@@ -129,4 +129,5 @@ accept:https://www.iana.org/assignments/media-types/media-types.xhtml#image
 install: npm i general-upload
 
 使用：import { GeneralUpload, FilesUpload,PicturesUpload } from "general-upload";
-import 'general-upload/style'
+vite：import 'general-upload/style'
+webpack4：import 'general-upload/dist/style.css'
